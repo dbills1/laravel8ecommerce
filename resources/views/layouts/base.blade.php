@@ -43,7 +43,7 @@
                             <div class="topbar-menu left-menu">
                                 <ul>
                                     <li class="menu-item" >
-                                        <a title="Hotline: (+123) 456 789" href="#" ><span class="icon label-before fa fa-mobile"></span>Hotline: (+123) 456 789</a>
+                                        <a title="Hotline: (+62) 87728433000" href="#" ><span class="icon label-before fa fa-mobile"></span>Hotline: (+62) 87728433000</a>
                                     </li>
                                 </ul>
                             </div>
@@ -143,28 +143,10 @@
                             @livewire('header-search-component')
 
                             <div class="wrap-icon right-section">
-                                <div class="wrap-icon-section wishlist">
-                                    <a href="#" class="link-direction">
-                                        <i class="fa fa-heart" aria-hidden="true"></i>
-                                        <div class="left-info">
-                                            @if (Cart::instance('wishlist')->count() > 0)
-                                                <span class="index">{{ Cart::instance('wishlist')->count() }} item</span>
-                                            @endif
-                                            <span class="title">Wishlist</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="wrap-icon-section minicart">
-                                    <a href="#" class="link-direction">
-                                        <i class="fa fa-shopping-basket" aria-hidden="true"></i>
-                                        <div class="left-info">
-                                            @if (Cart::instance('cart')->count() > 0)
-                                            <span class="index">{{ Cart::instance('cart')->count() }} items</span>
-                                            @endif
-                                            <span class="title">CART</span>
-                                        </div>
-                                    </a>
-                                </div>
+                                @livewire('wishlist-count-component')
+
+                                @livewire('cart-count-component')
+
                                 <div class="wrap-icon-section show-up-after-1024">
                                     <a href="#" class="mobile-navigation">
                                         <span></span>
