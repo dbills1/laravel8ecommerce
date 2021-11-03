@@ -147,7 +147,9 @@
                                     <a href="#" class="link-direction">
                                         <i class="fa fa-heart" aria-hidden="true"></i>
                                         <div class="left-info">
-                                            <span class="index">0 item</span>
+                                            @if (Cart::instance('wishlist')->count() > 0)
+                                                <span class="index">{{ Cart::instance('wishlist')->count() }} item</span>
+                                            @endif
                                             <span class="title">Wishlist</span>
                                         </div>
                                     </a>
@@ -156,8 +158,8 @@
                                     <a href="#" class="link-direction">
                                         <i class="fa fa-shopping-basket" aria-hidden="true"></i>
                                         <div class="left-info">
-                                            @if (Cart::count() > 0)
-                                            <span class="index">{{ Cart::count() }} items</span>
+                                            @if (Cart::instance('cart')->count() > 0)
+                                            <span class="index">{{ Cart::instance('cart')->count() }} items</span>
                                             @endif
                                             <span class="title">CART</span>
                                         </div>
@@ -276,11 +278,11 @@
                                             <ul>
                                                 <li>
                                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                                    <p class="contact-txt">45 Grand Central Terminal New York,NY 1017 United State USA</p>
+                                                    <p class="contact-txt">Tangerang, Banten</p>
                                                 </li>
                                                 <li>
                                                     <i class="fa fa-phone" aria-hidden="true"></i>
-                                                    <p class="contact-txt">(+123) 456 789 - (+123) 666 888</p>
+                                                    <p class="contact-txt">(+62) 87728433000</p>
                                                 </li>
                                                 <li>
                                                     <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -299,7 +301,7 @@
                                     <div class="item-content">
                                         <div class="wrap-hotline-footer">
                                             <span class="desc">Call Us toll Free</span>
-                                            <b class="phone-number">(+123) 456 789 - (+123) 666 888</b>
+                                            <b class="phone-number">(+62) 87728433000</b>
                                         </div>
                                     </div>
                                 </div>
@@ -455,7 +457,7 @@
                 <div class="coppy-right-box">
                     <div class="container">
                         <div class="coppy-right-item item-left">
-                            <p class="coppy-right-text">Copyright © 2020 Surfside Media. All rights reserved</p>
+                            <p class="coppy-right-text">Copyright © 2021 Don Bill. All rights reserved</p>
                         </div>
                         <div class="coppy-right-item item-right">
                             <div class="wrap-nav horizontal-nav">
