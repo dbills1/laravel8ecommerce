@@ -64,8 +64,8 @@
                         color: #ff0000 !important;
                     }
                 </style>
-                <div class="row">
 
+                <div class="row">
                     <ul class="product-list grid-products equal-container">
                         @php
                             $witems = Cart::instance('wishlist')->content()->pluck('id');
