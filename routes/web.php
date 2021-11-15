@@ -29,6 +29,7 @@ use App\Http\Livewire\Admin\AdminEditProductComponent;
 use App\Http\Livewire\Admin\AdminEditCategoryComponent;
 use App\Http\Livewire\Admin\AdminHomeCategoryComponent;
 use App\Http\Livewire\Admin\AdminOrderDetailsComponent;
+use App\Http\Livewire\User\UserChangePasswordComponent;
 use App\Http\Livewire\Admin\AdminAddHomeSliderComponent;
 use App\Http\Livewire\Admin\AdminEditHomeSliderComponent;
 
@@ -69,6 +70,7 @@ Route::middleware(['auth:sanctum' , 'verified'])->group(function(){
     Route::get('/user/orders', UserOrdersComponent::class)->name('user.orders');
     Route::get('/user/orders/{order_id}', UserOrderDetailsComponent::class)->name('user.orderdetails');
     Route::get('/user/review/{order_item_id}', UserReviewComponent::class)->name('user.review');
+    Route::get('/user/change-password', UserChangePasswordComponent::class)->name('user.changepassword');
 });
 
 // For Admin
